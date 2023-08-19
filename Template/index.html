@@ -1,0 +1,879 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8" />
+      <meta
+         name="viewport"
+         content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, viewport-fit=cover"
+         />
+      <meta name="apple-mobile-web-app-capable" content="yes" />
+      <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+      <meta name="theme-color" content="#ffffff" />
+      <!-- Your app title -->
+      <title>Yui Mobile</title>
+      <link rel="stylesheet" href="css/framework7-bundle.css" />
+      <link rel="stylesheet" href="css/framework7-icons.css" />
+      <link rel="stylesheet" href="css/style.css" />
+   </head>
+   <body class="color-blue">
+      <!-- App root element -->
+      <div id="app">
+         <!-- Left panel -->
+         <!-- Views container -->
+         <div class="views tabs">
+            <div class="view view-main tab tab-active view-init" id="tab-1">
+               <div class="page">
+                  <div class="page-content">
+                     <div class="card">
+                        <div class="card-image">
+                           <img
+                              src="img/cards/me.jpg"
+                              alt=""
+                              class="card-big-footer-image"
+                              />
+                        </div>
+                        <div class="card-footer card-big-footer">
+                           <h2>Üdvözlünk a Fűzfa apartmanban!</h2>
+                           <p>
+                              Nagy öröm számunkra, hogy
+                              megérkeztetek. Mindent megteszünk azért, hogy itt
+                              tartózkodásotok kellemes és emlékezetes legyen. Bármilyen
+                              kérdés vagy kérés esetén készséggel állunk
+                              rendelkezésetekre. </br></br>Köszönjük, hogy minket választottatok, és
+                              reméljük, hogy tartózkodásotokat élvezetesnek találjátok.
+                              <br/>Ráadásul ajándékba egy üveg vizet találtok az asztalon, valamint kávékapszulát is biztosítunk számotokra.
+                              </br></br>
+                              Legjobbakat kívánunk,</br>
+                              <b>Jócó és Tünde!</b>
+                           </p>
+                        </div>
+                     </div>
+                     <div class="card">
+                        <div class="card-footer card-big-footer">
+                           <h2>Bejelentkezés és kijelentkezés</h2>
+                           <p><b>Bejelentkezés:</b> 13:00-tól éjfélig</p>
+                           <p><b>Kijelentkezés:</b> Reggeltől délig 12 óráig</p>
+                           <p style="margin: 0px !important;">Amennyiben a kijelentkezés után még maradnál, biztosítunk csomagmegőrzési lehetőséget.</p>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="view view-init tab" id="tab-2">
+               <div class="page" >
+                  <div class="page-content">
+                     <h2>Legközelebbi üzlet</h2>
+                     <div class="movie-header">
+                        <img src="img/cards/sarki2.png" alt="" class="movie-cover">
+                        <div class="movie-infos">
+                           <div class="movie-block">
+                              <i class="icon f7-icons">map_pin_ellipse</i>
+                              <div class="movie-block-name">Típus</div>
+                              <div class="movie-block-text">Vegyes</div>
+                           </div>
+                           <div class="movie-block">
+                              <i class="icon f7-icons">clock_fill</i>
+                              <div class="movie-block-name">Gyalog</div>
+                              <div class="movie-block-text">3 perc</div>
+                           </div>
+                           <div class="movie-block">
+                              <i class="icon f7-icons">star_fill</i>
+                              <div class="movie-block-name">Értékelés</div>
+                              <div class="movie-block-text">4.7</div>
+                           </div>
+                        </div>
+                     </div>
+                     <h1>Sarki Üzlet</h1>
+                     <p>Közvetlen közelünkben található egy kényelmes sarki üzlet, ahol minden, amire szükséged lehet, kézre áll.<br/>  Az élelmiszerektől kezdve a vegyi árukig, itt mindent megtalálsz egy helyen. Praktikus és gyors vásárlási lehetőség mindennapi szükségleteid kielégítéséhez.</p>
+                     <a href="https://www.google.com/maps/place/Sarki+Üzlet+--+Önkiszolgáló/@46.7004304,25.5040335,17z/data=!3m1!4b1!4m6!3m5!1s0x474aedd1cd731fd3:0x12633330c2064bd1!8m2!3d46.7004304!4d25.5066084!16s%2Fg%2F11df82fjnd?entry=ttu" class="link link-banner dark-theme-green link-chevron">
+                        <i class="icon f7-icons">logo_google</i>
+                        <div class="link-banner-text">
+                           <div class="link-banner-title">Útvonal tervezés</div>
+                           <div class="link-banner-subtitle">Google térképen</div>
+                        </div>
+                     </a>
+                     <h2 style="padding-top: 15px;">Környékbeli ajánlott éttermek</h2>
+                     <div class="card">
+                        <div class="card-image">
+                           <img
+                              src="img/cards/palya.png"
+                              alt=""
+                              class="card-big-footer-image"
+                              style="height: 230px !important;"
+                              />
+                        </div>
+                        <div class="card-footer card-big-footer">
+                           <h2>Pálya Bisztró</h2>
+                           <p style="margin: 0px !important; padding-top: 10px;">
+                              Legjobb hangulat, legfinomabb ételek, leggyorsabb kiszolgálás! :)
+                           </p>
+                        </div>
+                        <div  class="ticket-fill ticket-image">
+                           <img src="img/cards/ticket-banner.jpg" alt="" class="ticket-image-bg">
+                           <div class="ticket-text">Kedvezmény</div>
+                           <div class="ticket-discount">-10%</div>
+                           <div class="ticket-description">Minden étkezésre</div>
+                        </div>
+                        <p style="padding-left: 20px;">
+                           Kérjük, mutasd meg a pincérnek a fizetéskor, hogy érvényesíteni tudjuk a kedvezményt.
+                        </p>
+                     </div>
+                     <div class="card">
+                        <div class="card-image">
+                           <img
+                              src="img/cards/basa.jpeg"
+                              alt=""
+                              class="card-big-footer-image"
+                              style="height: 230px !important;"
+                              />
+                        </div>
+                        <div class="card-footer card-big-footer">
+                           <h2>Basa Fogadó</h2>
+                           <p style="margin: 0px !important; padding-top: 10px;">
+                              A Basa Fogadó elkötelezetten őrzi a székely hagyományokat.
+                           </p>
+                        </div>
+                     </div>
+                     <div class="card">
+                        <div class="card-image">
+                           <img
+                              src="img/cards/pisz.jpeg"
+                              alt=""
+                              class="card-big-footer-image"
+                              style="height: 230px !important;"
+                              />
+                        </div>
+                        <div class="card-footer card-big-footer">
+                           <h2>Gyergyói Pisztrángos</h2>
+                           <p style="margin: 0px !important; padding-top: 10px;">
+                              Fő kínálatunk a helyben nevelt pisztráng sütve, 
+                              grillezve illetve füstölve. További ajánlatok között szerepelnek egyéb grill ételek, 
+                              frissensültek, levesek, desszertek.
+                           </p>
+                        </div>
+                     </div>
+                     <h2 style="padding-top: 10px;">Környékbeli ajánlott welness</h2>
+                     <div class="card">
+                        <div class="card-image">
+                           <img
+                              src="img/cards/weln.jpeg"
+                              alt=""
+                              class="card-big-footer-image"
+                              style="height: 230px !important;"
+                              />
+                        </div>
+                        <div class="card-footer card-big-footer">
+                           <h2>Gyergyószentmiklósi uszoda</h2>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="view view-init tab" id="tab-3">
+               <div class="page" >
+                  <div class="page-content">
+                     <div class="card">
+                        <div class="card-image">
+                           <img
+                              src="img/cards/templom.jpeg"
+                              alt=""
+                              class="card-big-footer-image"
+                              style="height: 230px !important;"
+                              />
+                        </div>
+                        <div class="card-footer card-big-footer">
+                           <h2>Gyergyóalfalfi templom</h2>
+                           <a href="/alfalvi-templom/" class="button button-fill button-round color-dark">
+                           Tovább olvasom
+                           <i class="icon f7-icons">arrow_right</i>
+                           </a>
+                        </div>
+                     </div>
+                     <div class="card">
+                        <div class="card-image">
+                           <img
+                              src="img/cards/sugo_barlang.jpg.png"
+                              alt=""
+                              class="card-big-footer-image"
+                              style="height: 230px !important;"
+                              />
+                        </div>
+                        <div class="card-footer card-big-footer">
+                           <h2>Súgó-barlang</h2>
+                           <a href="/sugo-barlang/" class="button button-fill button-round color-dark">
+                           Tovább olvasom
+                           <i class="icon f7-icons">arrow_right</i>
+                           </a>
+                        </div>
+                     </div>
+                     <div class="card">
+                        <div class="card-image">
+                           <img
+                              src="img/cards/laz.jpeg"
+                              alt=""
+                              class="card-big-footer-image"
+                              style="height: 230px !important;"
+                              />
+                        </div>
+                        <div class="card-footer card-big-footer">
+                           <h2>Lázár kastély</h2>
+                           <a href="/lazar-kastely/" class="button button-fill button-round color-dark">
+                           Tovább olvasom
+                           <i class="icon f7-icons">arrow_right</i>
+                           </a>
+                        </div>
+                     </div>
+                     <div class="card">
+                        <div class="card-image">
+                           <img
+                              src="img/cards/annato.jpeg"
+                              alt=""
+                              class="card-big-footer-image"
+                              style="height: 230px !important;"
+                              />
+                        </div>
+                        <div class="card-footer card-big-footer">
+                           <h2>Szent Anna Tó</h2>
+                           <a href="/szent-anna-to/" class="button button-fill button-round color-dark">
+                           Tovább olvasom
+                           <i class="icon f7-icons">arrow_right</i>
+                           </a>
+                        </div>
+                     </div>
+                     <div class="card">
+                        <div class="card-image">
+                           <img
+                              src="img/cards/medveto.png"
+                              alt=""
+                              class="card-big-footer-image"
+                              style="height: 230px !important;"
+                              />
+                        </div>
+                        <div class="card-footer card-big-footer">
+                           <h2>Medve-tó és Parajdi sóbánya</h2>
+                           <a href="/medve-to/" class="button button-fill button-round color-dark">
+                           Tovább olvasom
+                           <i class="icon f7-icons">arrow_right</i>
+                           </a>
+                        </div>
+                     </div>
+                     <div class="card">
+                        <div class="card-image">
+                           <img
+                              src="img/cards/csiktemp.jpeg"
+                              alt=""
+                              class="card-big-footer-image"
+                              style="height: 230px !important;"
+                              />
+                        </div>
+                        <div class="card-footer card-big-footer">
+                           <h2>Csíksomlyói Kegytemplom</h2>
+                           <a href="/csiksomlyoi-templom/" class="button button-fill button-round color-dark">
+                           Tovább olvasom
+                           <i class="icon f7-icons">arrow_right</i>
+                           </a>
+                        </div>
+                     </div>
+                     <div class="card">
+                        <div class="card-image">
+                           <img
+                              src="img/cards/gyilkto.jpeg"
+                              alt=""
+                              class="card-big-footer-image"
+                              style="height: 230px !important;"
+                              />
+                        </div>
+                        <div class="card-footer card-big-footer">
+                           <h2>Gyilkos-tó</h2>
+                           <a href="/gyilkos-to/" class="button button-fill button-round color-dark">
+                           Tovább olvasom
+                           <i class="icon f7-icons">arrow_right</i>
+                           </a>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="view view-init tab" id="tab-4">
+               <div class="page">
+                  <div class="navbar navbar-large">
+                     <div class="navbar-bg"></div>
+                     <div class="navbar-inner">
+                        <div class="left">
+                           <a href="/settings/" class="link icon-only navbar-profile">
+                           <img src="img/avatars/small-avatar.jpg" alt="" />
+                           </a>
+                        </div>
+                        <div class="title">Components</div>
+                        <div class="title-large">
+                           <div class="title-large-text">Components</div>
+                        </div>
+                        <div class="right">
+                           <a href="#" class="link icon-only switch-theme">
+                           <i class="icon f7-icons">moon_stars</i>
+                           </a>
+                           <a href="/notifications/" class="link icon-only">
+                           <i class="icon f7-icons">
+                           bell
+                           <span class="badge bg-color-primary">5</span>
+                           </i>
+                           </a>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="page-content">
+                     <div class="light-gray-title">General</div>
+                     <div
+                        class="list links-list colored-icons-list list-outline list-dividers full-width"
+                        >
+                        <ul>
+                           <li>
+                              <a href="/accordion/">
+                                 <div class="colored-icon green">
+                                    <i class="icon f7-icons"
+                                       >arrowtriangle_down_square_fill</i
+                                       >
+                                 </div>
+                                 Accordion
+                              </a>
+                           </li>
+                           <li>
+                              <a href="/badge/">
+                                 <div class="colored-icon green">
+                                    <i class="icon f7-icons">app_badge_fill</i>
+                                 </div>
+                                 Badge / Tag
+                              </a>
+                           </li>
+                           <li>
+                              <a href="/button/">
+                                 <div class="colored-icon green">
+                                    <i class="icon f7-icons">rectangle_grid_1x2_fill</i>
+                                 </div>
+                                 Button
+                              </a>
+                           </li>
+                           <li>
+                              <a href="/preloader/">
+                                 <div class="colored-icon green">
+                                    <i class="icon f7-icons"
+                                       >arrow_2_circlepath_circle_fill</i
+                                       >
+                                 </div>
+                                 Preloader
+                              </a>
+                           </li>
+                           <li>
+                              <a href="/progress-bar/">
+                                 <div class="colored-icon green">
+                                    <i class="icon f7-icons">minus_rectangle_fill</i>
+                                 </div>
+                                 Progress Bar
+                              </a>
+                           </li>
+                        </ul>
+                     </div>
+                     <div class="light-gray-title">Forms</div>
+                     <div
+                        class="list links-list colored-icons-list list-outline list-dividers full-width"
+                        >
+                        <ul>
+                           <li>
+                              <a href="/checkbox/">
+                                 <div class="colored-icon blue">
+                                    <i class="icon f7-icons">checkmark_square_fill</i>
+                                 </div>
+                                 Checkbox
+                              </a>
+                           </li>
+                           <li>
+                              <a href="/picker/">
+                                 <div class="colored-icon blue">
+                                    <i class="icon f7-icons">list_bullet_below_rectangle</i>
+                                 </div>
+                                 Picker
+                              </a>
+                           </li>
+                           <li>
+                              <a href="/radio/">
+                                 <div class="colored-icon blue">
+                                    <i class="icon f7-icons">checkmark_alt_circle_fill</i>
+                                 </div>
+                                 Radio
+                              </a>
+                           </li>
+                           <li>
+                              <a href="/range-slider/">
+                                 <div class="colored-icon blue">
+                                    <i class="icon f7-icons"
+                                       >slider_horizontal_below_rectangle</i
+                                       >
+                                 </div>
+                                 Range Slider
+                              </a>
+                           </li>
+                           <li>
+                              <a href="/stepper/">
+                                 <div class="colored-icon blue">
+                                    <i class="icon f7-icons">plusminus_circle_fill</i>
+                                 </div>
+                                 Stepper
+                              </a>
+                           </li>
+                           <li>
+                              <a href="/text-input/">
+                                 <div class="colored-icon blue">
+                                    <i class="icon f7-icons">textbox</i>
+                                 </div>
+                                 Text Input
+                              </a>
+                           </li>
+                           <li>
+                              <a href="/toggle-button/">
+                                 <div class="colored-icon blue">
+                                    <i class="icon f7-icons"
+                                       >square_fill_line_vertical_square</i
+                                       >
+                                 </div>
+                                 Toggle Button
+                              </a>
+                           </li>
+                        </ul>
+                     </div>
+                     <div class="light-gray-title">Cards</div>
+                     <div
+                        class="list links-list colored-icons-list list-outline list-dividers full-width"
+                        >
+                        <ul>
+                           <li>
+                              <a href="/card/">
+                                 <div class="colored-icon red">
+                                    <i class="icon f7-icons">minus_rectangle_fill</i>
+                                 </div>
+                                 Card
+                              </a>
+                           </li>
+                           <li>
+                              <a href="/card-footer/">
+                                 <div class="colored-icon red">
+                                    <i class="icon f7-icons">rectangle_dock</i>
+                                 </div>
+                                 Card With Footer
+                              </a>
+                           </li>
+                           <li>
+                              <a href="/card-big-footer/">
+                                 <div class="colored-icon red">
+                                    <i class="icon f7-icons">app_fill</i>
+                                 </div>
+                                 Card With Big Footer
+                              </a>
+                           </li>
+                        </ul>
+                     </div>
+                     <div class="light-gray-title">Sliders</div>
+                     <div
+                        class="list links-list colored-icons-list list-outline list-dividers full-width"
+                        >
+                        <ul>
+                           <li>
+                              <a href="/slider-cards/">
+                                 <div class="colored-icon yellow">
+                                    <i class="icon f7-icons">minus_rectangle_fill</i>
+                                 </div>
+                                 Card Slider
+                              </a>
+                           </li>
+                           <li>
+                              <a href="/slider-cards-footer/">
+                                 <div class="colored-icon yellow">
+                                    <i class="icon f7-icons">rectangle_dock</i>
+                                 </div>
+                                 Card With Footer Slider
+                              </a>
+                           </li>
+                           <li>
+                              <a href="/slider-authors/">
+                                 <div class="colored-icon yellow">
+                                    <i class="icon f7-icons">person_3_fill</i>
+                                 </div>
+                                 Author Slider
+                              </a>
+                           </li>
+                           <li>
+                              <a href="/slider-categories/">
+                                 <div class="colored-icon yellow">
+                                    <i class="icon f7-icons">square_grid_3x2_fill</i>
+                                 </div>
+                                 Category Slider
+                              </a>
+                           </li>
+                           <li>
+                              <a href="/slider-albums/">
+                                 <div class="colored-icon yellow">
+                                    <i class="icon f7-icons">music_albums_fill</i>
+                                 </div>
+                                 Album Slider
+                              </a>
+                           </li>
+                           <li>
+                              <a href="/slider-movies/">
+                                 <div class="colored-icon yellow">
+                                    <i class="icon f7-icons">film_fill</i>
+                                 </div>
+                                 Movie Slider
+                              </a>
+                           </li>
+                        </ul>
+                     </div>
+                     <div class="light-gray-title">Lists</div>
+                     <div
+                        class="list links-list colored-icons-list list-outline list-dividers full-width"
+                        >
+                        <ul>
+                           <li>
+                              <a href="/list/">
+                                 <div class="colored-icon purple">
+                                    <i class="icon f7-icons">list_number_rtl</i>
+                                 </div>
+                                 List
+                              </a>
+                           </li>
+                           <li>
+                              <a href="/list-icon/">
+                                 <div class="colored-icon purple">
+                                    <i class="icon f7-icons">list_dash</i>
+                                 </div>
+                                 List With Icon
+                              </a>
+                           </li>
+                           <li>
+                              <a href="/event-list/">
+                                 <div class="colored-icon purple">
+                                    <i class="icon f7-icons">calendar_today</i>
+                                 </div>
+                                 Event List
+                              </a>
+                           </li>
+                           <li>
+                              <a href="/post-list/">
+                                 <div class="colored-icon purple">
+                                    <i class="icon f7-icons">rectangle_grid_1x2_fill</i>
+                                 </div>
+                                 Post List
+                              </a>
+                           </li>
+                           <li>
+                              <a href="/stocks/">
+                                 <div class="colored-icon purple">
+                                    <i class="icon f7-icons">graph_square_fill</i>
+                                 </div>
+                                 Stocks
+                              </a>
+                           </li>
+                           <li>
+                              <a href="/author-list/">
+                                 <div class="colored-icon purple">
+                                    <i class="icon f7-icons">person_2_fill</i>
+                                 </div>
+                                 Author List
+                              </a>
+                           </li>
+                           <li>
+                              <a href="/album-list/">
+                                 <div class="colored-icon purple">
+                                    <i class="icon f7-icons">music_albums_fill</i>
+                                 </div>
+                                 Album List
+                              </a>
+                           </li>
+                        </ul>
+                     </div>
+                     <div class="light-gray-title">Blocks</div>
+                     <div
+                        class="list links-list colored-icons-list list-outline list-dividers full-width"
+                        >
+                        <ul>
+                           <li>
+                              <a href="/rating/">
+                                 <div class="colored-icon pink">
+                                    <i class="icon f7-icons">star_lefthalf_fill</i>
+                                 </div>
+                                 Rating
+                              </a>
+                           </li>
+                           <li>
+                              <a href="/ticket/">
+                                 <div class="colored-icon pink">
+                                    <i class="icon f7-icons">ticket_fill</i>
+                                 </div>
+                                 Ticket
+                              </a>
+                           </li>
+                           <li>
+                              <a href="/history-timeline/">
+                                 <div class="colored-icon pink">
+                                    <i class="icon f7-icons">list_bullet_indent</i>
+                                 </div>
+                                 History Timeline
+                              </a>
+                           </li>
+                           <li>
+                              <a href="/information-block/">
+                                 <div class="colored-icon pink">
+                                    <i class="icon f7-icons">exclamationmark_square_fill</i>
+                                 </div>
+                                 Information
+                              </a>
+                           </li>
+                           <li>
+                              <a href="/link-banner/">
+                                 <div class="colored-icon pink">
+                                    <i class="icon f7-icons">link_circle_fill</i>
+                                 </div>
+                                 Link Banner
+                              </a>
+                           </li>
+                           <li>
+                              <a href="/comments/">
+                                 <div class="colored-icon pink">
+                                    <i class="icon f7-icons"
+                                       >bubble_left_bubble_right_fill</i
+                                       >
+                                 </div>
+                                 Comments
+                              </a>
+                           </li>
+                        </ul>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="view view-init tab" id="tab-5">
+               <div class="page">
+                  <div class="navbar navbar-large">
+                     <div class="navbar-bg"></div>
+                     <div class="navbar-inner">
+                        <div class="left">
+                           <a href="/settings/" class="link icon-only navbar-profile">
+                           <img src="img/avatars/small-avatar.jpg" alt="" />
+                           </a>
+                        </div>
+                        <div class="title">Features</div>
+                        <div class="title-large">
+                           <div class="title-large-text">Features</div>
+                        </div>
+                        <div class="right">
+                           <a href="#" class="link icon-only switch-theme">
+                           <i class="icon f7-icons">moon_stars</i>
+                           </a>
+                           <a href="/notifications/" class="link icon-only">
+                           <i class="icon f7-icons">
+                           bell
+                           <span class="badge bg-color-primary">5</span>
+                           </i>
+                           </a>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="page-content">
+                     <div class="light-gray-title">General</div>
+                     <div
+                        class="list links-list colored-icons-list full-width list-outline list-dividers"
+                        >
+                        <ul>
+                           <li>
+                              <a href="/action-sheet/">
+                                 <div class="colored-icon blue">
+                                    <i class="icon f7-icons">square_arrow_up_fill</i>
+                                 </div>
+                                 Action Sheet
+                              </a>
+                           </li>
+                           <li>
+                              <a href="/columns/">
+                                 <div class="colored-icon green">
+                                    <i class="icon f7-icons">rectangle_split_3x1_fill</i>
+                                 </div>
+                                 Columns
+                              </a>
+                           </li>
+                           <li>
+                              <a href="/dialog/">
+                                 <div class="colored-icon blue">
+                                    <i class="icon f7-icons">checkmark_rectangle_fill</i>
+                                 </div>
+                                 Dialog
+                              </a>
+                           </li>
+                           <li>
+                              <a href="/icons/">
+                                 <div class="colored-icon green">
+                                    <i class="icon f7-icons">circle_grid_3x3_fill</i>
+                                 </div>
+                                 Icons
+                              </a>
+                           </li>
+                           <li>
+                              <a href="/infinite-scroll/">
+                                 <div class="colored-icon pink">
+                                    <i class="icon f7-icons">infinite</i>
+                                 </div>
+                                 Infinite Scroll
+                              </a>
+                           </li>
+                           <li>
+                              <a href="/notification/">
+                                 <div class="colored-icon yellow">
+                                    <i class="icon f7-icons">square_favorites_alt_fill</i>
+                                 </div>
+                                 Notification
+                              </a>
+                           </li>
+                           <li>
+                              <a href="/page/">
+                                 <div class="colored-icon purple">
+                                    <i class="icon f7-icons">doc_fill</i>
+                                 </div>
+                                 Page
+                              </a>
+                           </li>
+                           <li>
+                              <a href="/panel/">
+                                 <div class="colored-icon purple">
+                                    <i class="icon f7-icons">sidebar_left</i>
+                                 </div>
+                                 Panel
+                              </a>
+                           </li>
+                           <li>
+                              <a href="/photo-browser/">
+                                 <div class="colored-icon yellow">
+                                    <i class="icon f7-icons"
+                                       >photo_fill_on_rectangle_fill</i
+                                       >
+                                 </div>
+                                 Photo Browser
+                              </a>
+                           </li>
+                           <li>
+                              <a href="/popover/">
+                                 <div class="colored-icon blue">
+                                    <i class="icon f7-icons">bubble_middle_top_fill</i>
+                                 </div>
+                                 Popover
+                              </a>
+                           </li>
+                           <li>
+                              <a href="/popup/">
+                                 <div class="colored-icon blue">
+                                    <i class="icon f7-icons">arrow_up_square_fill</i>
+                                 </div>
+                                 Popup
+                              </a>
+                           </li>
+                           <li>
+                              <a href="/pull-to-refresh/">
+                                 <div class="colored-icon pink">
+                                    <i class="icon f7-icons"
+                                       >arrow_uturn_down_circle_fill</i
+                                       >
+                                 </div>
+                                 Pull To Refresh
+                              </a>
+                           </li>
+                           <li>
+                              <a href="/sheet-modal/">
+                                 <div class="colored-icon blue">
+                                    <i class="icon f7-icons"
+                                       >arrowtriangle_up_square_fill</i
+                                       >
+                                 </div>
+                                 Sheet Modal
+                              </a>
+                           </li>
+                           <li>
+                              <a href="/swipe-to-delete/">
+                                 <div class="colored-icon pink">
+                                    <i class="icon f7-icons">square_arrow_left_fill</i>
+                                 </div>
+                                 Swipe To Delete
+                              </a>
+                           </li>
+                           <li>
+                              <a href="/tabs/">
+                                 <div class="colored-icon green">
+                                    <i class="icon f7-icons">square_split_2x1_fill</i>
+                                 </div>
+                                 Tabs
+                              </a>
+                           </li>
+                           <li>
+                              <a href="/text-editor/">
+                                 <div class="colored-icon yellow">
+                                    <i class="icon f7-icons">textbox</i>
+                                 </div>
+                                 Text Editor
+                              </a>
+                           </li>
+                           <li>
+                              <a href="/toast/">
+                                 <div class="colored-icon blue">
+                                    <i class="icon f7-icons"
+                                       >square_arrow_up_on_square_fill</i
+                                       >
+                                 </div>
+                                 Toast
+                              </a>
+                           </li>
+                           <li>
+                              <a href="/tooltip/">
+                                 <div class="colored-icon purple">
+                                    <i class="icon f7-icons">captions_bubble_fill</i>
+                                 </div>
+                                 Tooltip
+                              </a>
+                           </li>
+                           <li>
+                              <a href="/typography/">
+                                 <div class="colored-icon green">
+                                    <i class="icon f7-icons icon-bold">textformat</i>
+                                 </div>
+                                 Typography
+                              </a>
+                           </li>
+                        </ul>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="toolbar tabbar tabbar-icons toolbar-bottom">
+               <div class="toolbar-inner">
+                  <a href="#tab-1" class="tab-link tab-link-active">
+                  <i class="icon f7-icons">hand_thumbsup</i>
+                  <span class="tabbar-label">Üdvözlet</span>
+                  </a>
+                  <a href="#tab-2" class="tab-link">
+                  <i class="icon f7-icons">bag</i>
+                  <span class="tabbar-label">Boltok</span>
+                  </a>
+                  <a href="#tab-3" class="tab-link">
+                  <i class="icon f7-icons">camera_on_rectangle</i>
+                  <span class="tabbar-label">Látnivalók</span>
+                  </a>
+                  <a href="#tab-4" class="tab-link">
+                  <i class="icon f7-icons">calendar</i>
+                  <span class="tabbar-label">Események</span>
+                  </a>
+                  <a href="#tab-5" class="tab-link">
+                  <i class="icon f7-icons">phone</i>
+                  <span class="tabbar-label">Elérhetőség</span>
+                  </a>
+               </div>
+            </div>
+         </div>
+      </div>
+      <script src="js/framework7-bundle.js"></script>
+      <script src="js/app.js"></script>
+   </body>
+</html>
