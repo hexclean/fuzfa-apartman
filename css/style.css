@@ -148,7 +148,7 @@ body {
   width: calc(100% + 30px) !important;
 }
 p {
-  line-height: 1.8em;
+  line-height: 1.7em;
   color: var(--text-color);
   font-size: 15px;
 }
