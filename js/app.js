@@ -33,7 +33,8 @@ var app = new Framework7({
   iosTranslucentBars: false,
   iosTranslucentModals: false,
   view: {
-    browserHistory: false,
+    browserHistory: true,
+    browserHistoryAnimate: Framework7.device.ios ? false : true,
   },
   routes: [
     // Features
@@ -855,6 +856,10 @@ $$(document).on("page:init", function (e) {
 // 15. Switch Theme
 
 $$(".switch-theme").on("click", function () {
+  $$(".page").toggleClass("page-theme-transition");
+  $$(".page").transitionEnd(function () {
+    $$(".page").toggleClass("page-theme-transition");
+  });
   if ($$("body").hasClass("dark")) {
     $$(".switch-theme i").text("moon_stars");
   } else {
