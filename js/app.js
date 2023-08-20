@@ -305,6 +305,10 @@ var app = new Framework7({
       url: "pages/pages/gyilkos_to.html",
     },
     {
+      path: "/ajandek/",
+      url: "pages/pages/ajandek.html",
+    },
+    {
       path: "/create-post/",
       url: "pages/pages/create-post.html",
     },
