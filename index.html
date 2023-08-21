@@ -786,19 +786,19 @@
                <div class="toolbar-inner">
                   <a href="#tab-1" class="tab-link tab-link-active">
                   <i class="icon f7-icons">hand_thumbsup</i>
-                  <span class="tabbar-label">Üdvözlet</span>
+                  <span class="tabbar-label menuWelcome">Üdvözlet</span>
                   </a>
                   <a href="#tab-2" class="tab-link">
                   <i class="icon f7-icons">bag</i>
-                  <span class="tabbar-label">Boltok</span>
+                  <span class="tabbar-label menuShopping">Boltok</span>
                   </a>
                   <a href="#tab-3" class="tab-link">
                   <i class="icon f7-icons">calendar_badge_plus</i>
-                  <span class="tabbar-label">Programok</span>
+                  <span class="tabbar-label menuPrograms">Programok</span>
                   </a>
                   <a href="#tab-4" class="tab-link">
                   <i class="icon f7-icons">gift</i>
-                  <span class="tabbar-label">Ajándék</span>
+                  <span class="tabbar-label menuGift">Ajándék</span>
                   </a>
                   <!-- <a href="#tab-4" class="tab-link">
                      <i class="icon f7-icons">calendar</i>
@@ -817,29 +817,71 @@
       <script>
          const langEn = document.querySelector('.langWrap');
          const link = document.querySelectorAll('a');
-         const title1 = document.querySelector(".changeName");
+         let localLang = localStorage.getItem("language");
 
-         link.forEach(el =>{
-            el.addEventListener('click', () =>{
-               const attr = el.getAttribute("language");
-               title1.textContent = data[attr].titleTest;
-            })
-         })
+         const title1 = document.querySelector(".changeName");
+         const menuWelcome = document.querySelector(".menuWelcome");
+         const menuShopping = document.querySelector(".menuShopping");
+         const menuPrograms = document.querySelector(".menuPrograms");
+         const menuGift = document.querySelector(".menuGift");
 
          var data = {
             "english":{
                titleTest: "Fűzfa Apartment",
-               description: "description en"
+               menuWelcome: "Welcome",
+               menuShopping: "Shopping",
+               menuPrograms: "Programs",
+               menuGift: "Gift",
             },
             "hungarian":{
                titleTest: "Fűzfa Apartman",
-               description: "description"
+               menuWelcome: "Üdvözlet",
+               menuShopping: "Boltok",
+               menuPrograms: "Programok",
+               menuGift: "Ajándék",
             },
             "romanian":{
                titleTest: "Fűzfa Apartament",
-               description: "description"
+               menuWelcome: "...",
+               menuShopping: "...",
+               menuPrograms: "...",
+               menuGift: "...",
             }
          }
+      
+         if(localLang == null){
+            localStorage.setItem("language", "hungarian");
+            let localLangFin = localStorage.getItem("language");
+
+            title1.textContent = data[localLangFin].titleTest;
+            menuWelcome.textContent = data[localLangFin].menuWelcome;
+            menuShopping.textContent = data[localLangFin].menuShopping;
+            menuPrograms.textContent = data[localLangFin].menuPrograms;
+            menuGift.textContent = data[localLangFin].menuGift;
+
+         }else{
+            console.log("localLang111: ", localLang);
+            title1.textContent = data[localLang].titleTest;
+            menuWelcome.textContent = data[localLang].menuWelcome;
+            menuShopping.textContent = data[localLang].menuShopping;
+            menuPrograms.textContent = data[localLang].menuPrograms;
+            menuGift.textContent = data[localLang].menuGift;
+         }
+
+         link.forEach(el =>{
+            el.addEventListener('click', () =>{
+               const attr = el.getAttribute("language");
+               localStorage.setItem("language", attr);
+
+               title1.textContent = data[attr].titleTest;
+               menuWelcome.textContent = data[attr].menuWelcome;
+               menuShopping.textContent = data[attr].menuShopping;
+               menuPrograms.textContent = data[attr].menuPrograms;
+               menuGift.textContent = data[attr].menuGift;
+            })
+         })
+
+
       </script>
    </body>
 </html>
