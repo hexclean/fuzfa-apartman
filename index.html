@@ -24,40 +24,25 @@
             <div class="view view-main tab tab-active view-init" id="tab-1">
                <div class="page">
                   <div class="navbar">
-                     <div class="navbar-bg"></div>
-                     <div class="navbar-inner">
-                        <div class="left">
-                           <a href="/settings/" class="">
-                              <!-- <img src="img/avatars/small-avatar.jpg" alt=""> -->
-                              <h3>Fűzfa Apartman</h3>
-                           </a>
-                        </div>
-                        <!-- <div class="title">Discover</div> -->
-                        <!-- <div class="title-large">
-                           <div class="title-large-text">Discover</div>
-                           </div> -->
-                        <div class="right">
-                           <a href="#" data-popup=".popup-1" class="button-fill popup-open">
-                           <i class="icon f7-icons">globe</i>
-                           </a>
-                           <div class="popup popup-1">
-                              <div class="page">
-                                 <div class="page-content popup-demo">
-                                    <div class="popup-content">
-                                       <!-- <img src="img/illustrations/onboarding-2.svg" alt=""> -->
-                                        <div class="album-header">
-      <img src="img/albums/cover.jpg" alt="" class="album-cover">
-      <div class="album-title">Crazy Reverie</div>
-      <div class="album-artist">Solstice Band</div>
-    </div>
-                                    </div>
-                                    <a href="#" class="button button-fill color-dark popup-close">Ablak bezárása</a>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
+              <div class="navbar-bg"></div>
+              <div class="navbar-inner">
+                <div class="left">
+                  <h3 class="changeName">Fűzfa Apartman</h3>
+                </div>
+                <div class="right langWrap">
+                 <a href="#" class="link icon-only navbar-profile" language="hungarian">
+                    <img style="height: 25px; width: 25px;" src="img/cards/flaghu.png" alt="">
+                  </a>
+                 <a href="#" class="link icon-only navbar-profile" language="english">
+                    <img style="height: 25px; width: 25px;" src="img/cards/flagen.webp" alt="">
+                  </a>
+                  <a href="#" class="link icon-only navbar-profile" language="romanian">
+                    <img style="height: 25px; width: 25px;" src="img/cards/flagro.png" alt="">
+                  </a>
+                </div>
+              </div>
+            </div>
+                             
                   <div class="page-content">
                      <h1 style="text-align: center;">Üdvözlünk a Fűzfa apartmanban!</h1>
                      <div class="card">
@@ -829,5 +814,32 @@
       </div>
       <script src="js/framework7-bundle.js"></script>
       <script src="js/app.js"></script>
+      <script>
+         const langEn = document.querySelector('.langWrap');
+         const link = document.querySelectorAll('a');
+         const title1 = document.querySelector(".changeName");
+
+         link.forEach(el =>{
+            el.addEventListener('click', () =>{
+               const attr = el.getAttribute("language");
+               title1.textContent = data[attr].titleTest;
+            })
+         })
+
+         var data = {
+            "english":{
+               titleTest: "Fűzfa Apartment",
+               description: "description en"
+            },
+            "hungarian":{
+               titleTest: "Fűzfa Apartman",
+               description: "description"
+            },
+            "romanian":{
+               titleTest: "Fűzfa Apartament",
+               description: "description"
+            }
+         }
+      </script>
    </body>
 </html>
