@@ -15,6 +15,15 @@ const checkInOut = document.querySelector(".checkInOut");
 const checkIn = document.querySelector(".checkIn");
 const checkOut = document.querySelector(".checkOut");
 const checkOut2 = document.querySelector(".checkOut2");
+const impInfo = document.querySelector(".impInfo");
+const impInfo1 = document.querySelector(".impInfo1");
+const wifiInfo = document.querySelector(".wifiInfo");
+const wifiName = document.querySelector(".wifiName");
+const wifiPsw = document.querySelector(".wifiPsw");
+const coldWater = document.querySelector(".coldWater");
+const coldWaterDesc = document.querySelector(".coldWaterDesc");
+const smokingTitle = document.querySelector(".smokingTitle");
+const smokingDescription = document.querySelector(".smokingDescription");
 
 var data = {
   english: {
@@ -33,6 +42,17 @@ var data = {
     checkOut: "Check-out: between 6:00 and 12:00",
     checkOut2:
       "If you wish to stay after check-out, a left-luggage office will be provided.",
+    impInfo: "Important information",
+    impInfo1:
+      "Let us share with you some useful information to make your stay even more comfortable:",
+    wifiInfo: "WiFi Information:",
+    wifiName: "Name: Fuzfa Apartman",
+    wifiPsw: "Password: fuzfaapartman2023",
+    coldWater: "Hot water usage:",
+    coldWaterDesc:
+      "Hot water comes from solar collectors. When you want to use it, you need to leave a few minutes for the hot water to warm up.",
+    smokingTitle: "Smoking:",
+    smokingDescription: "If you smoke, you can smoke on the balcony.",
   },
   hungarian: {
     titleTest: "Fűzfa Apartman",
@@ -50,6 +70,17 @@ var data = {
     checkOut: "Kijelentkezés: 6:00 és 12:00 óra között",
     checkOut2:
       "Amennyiben a kijelentkezés után még maradnál, biztosítunk csomagmegőrzési lehetőséget.",
+    impInfo: "Fontos tudnivalók",
+    impInfo1:
+      "Engedj meg, hogy megosszunk veled néhány hasznos információt, hogy tartózkodásod még kényelmesebb legyen:",
+    wifiInfo: "WiFi Információk:",
+    wifiName: "Név: Fuzfa Apartman",
+    wifiPsw: "Jelszó: fuzfaapartman2023",
+    coldWater: "Melegvíz használat:",
+    coldWaterDesc:
+      "A melegvíz napkollektorokból érkezik. Amikor használni szeretnéd, néhány percet várnod kell, hogy a víz meleg legyen.",
+    smokingTitle: "Dohányzás:",
+    smokingDescription: "Ha dohányoznál, az erkélyen van erre lehetőség.",
   },
   romanian: {
     titleTest: "Apartament Fűzfa",
@@ -65,27 +96,22 @@ var data = {
     checkIn: "...",
     checkOut: "...",
     checkOut2: "...",
+    impInfo: "...",
+    impInfo1: "...",
+    wifiInfo: "...",
+    wifiName: "...",
+    wifiPsw: "...",
+    coldWater: "...",
+    coldWaterDesc: "...",
+    smokingTitle: "...",
+    smokingDescription: "...",
   },
 };
 
 if (localLang == null) {
   localStorage.setItem("language", "hungarian");
-  let localLangFin = localStorage.getItem("language");
-
-  title1.textContent = data[localLangFin].titleTest;
-  menuWelcome.textContent = data[localLangFin].menuWelcome;
-  menuShopping.textContent = data[localLangFin].menuShopping;
-  menuPrograms.textContent = data[localLangFin].menuPrograms;
-  menuGift.textContent = data[localLangFin].menuGift;
-  welcomeTitle.textContent = data[localLangFin].welcomeTitle;
-  welcome_text1.textContent = data[localLangFin].welcome_text1;
-  welcome_text2.textContent = data[localLangFin].welcome_text2;
-  welcome_text3.textContent = data[localLangFin].welcome_text3;
-  checkInOut.textContent = data[localLangFin].checkInOut;
-  checkIn.textContent = data[localLangFin].checkIn;
-  checkOut.textContent = data[localLangFin].checkOut;
-  checkOut2.textContent = data[localLangFin].checkOut2;
 } else {
+  let localLang = localStorage.getItem("language");
   title1.textContent = data[localLang].titleTest;
   menuWelcome.textContent = data[localLang].menuWelcome;
   menuShopping.textContent = data[localLang].menuShopping;
@@ -99,6 +125,15 @@ if (localLang == null) {
   checkIn.textContent = data[localLang].checkIn;
   checkOut.textContent = data[localLang].checkOut;
   checkOut2.textContent = data[localLang].checkOut2;
+  impInfo.textContent = data[localLang].impInfo;
+  impInfo1.textContent = data[localLang].impInfo1;
+  wifiInfo.textContent = data[localLang].wifiInfo;
+  wifiName.textContent = data[localLang].wifiName;
+  wifiPsw.textContent = data[localLang].wifiPsw;
+  coldWater.textContent = data[localLang].coldWater;
+  coldWaterDesc.textContent = data[localLang].coldWaterDesc;
+  smokingTitle.textContent = data[localLang].smokingTitle;
+  smokingDescription.textContent = data[localLang].smokingDescription;
 }
 
 link.forEach((el) => {
@@ -119,5 +154,14 @@ link.forEach((el) => {
     checkIn.textContent = data[attr].checkIn;
     checkOut.textContent = data[attr].checkOut;
     checkOut2.textContent = data[attr].checkOut2;
+    impInfo.textContent = data[attr].impInfo;
+    impInfo1.textContent = data[attr].impInfo1;
+    wifiInfo.textContent = data[attr].wifiInfo;
+    wifiName.textContent = data[attr].wifiName;
+    wifiPsw.textContent = data[attr].wifiPsw;
+    coldWater.textContent = data[attr].coldWater;
+    coldWaterDesc.textContent = data[attr].coldWaterDesc;
+    smokingTitle.textContent = data[attr].smokingTitle;
+    smokingDescription.textContent = data[attr].smokingDescription;
   });
 });
