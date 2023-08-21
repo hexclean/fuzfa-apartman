@@ -44,7 +44,7 @@
             </div>
                              
                   <div class="page-content">
-                     <h1 style="text-align: center;">Üdvözlünk a Fűzfa apartmanban!</h1>
+                     <h1 style="text-align: center;" class="welcomeTitle">Szeretettel üdvözlünk!</h1>
                      <div class="card">
                         <div class="card-image">
                            <img
@@ -54,20 +54,13 @@
                               />
                         </div>
                         <div class="card-footer card-big-footer">
-                           <p style="margin: 0px;">
-                              Nagy öröm számunkra, hogy
-                              megérkeztetek. Mindent megteszünk azért, hogy itt
-                              tartózkodásotok kellemes és emlékezetes legyen. Bármilyen
-                              kérdés vagy kérés esetén készséggel állunk
-                              rendelkezésetekre.
-                           </p>
-                           <p style="margin: 0px; padding-top: 3px;">
-                              Köszönjük, hogy minket választottatok, és
-                              reméljük, hogy tartózkodásotokat élvezetesnek találjátok.
-                           </p>
-                           <p style="margin: 0px; padding-top: 3px;">
+                           <p class="welcome_text1" style="margin: 0px;">
+                              Nagy öröm számunkra, hogy megérkeztetek. Mindent megteszünk azért, hogy itt tartózkodásotok kellemes és emlékezetes legyen. Köszönjük, hogy minket választottatok.
+                              </p>
+                              <br/>
+                           <p class="welcome_text2" style="margin: 0px; padding-top: 3px;">
                               Legjobbakat kívánunk,</br>
-                              <b>Jócó és Tünde!</b>
+                              <b>Tünde és Jócó!</b>
                            </p>
                         </div>
                      </div>
@@ -814,74 +807,6 @@
       </div>
       <script src="js/framework7-bundle.js"></script>
       <script src="js/app.js"></script>
-      <script>
-         const langEn = document.querySelector('.langWrap');
-         const link = document.querySelectorAll('a');
-         let localLang = localStorage.getItem("language");
-
-         const title1 = document.querySelector(".changeName");
-         const menuWelcome = document.querySelector(".menuWelcome");
-         const menuShopping = document.querySelector(".menuShopping");
-         const menuPrograms = document.querySelector(".menuPrograms");
-         const menuGift = document.querySelector(".menuGift");
-
-         var data = {
-            "english":{
-               titleTest: "Fűzfa Apartment",
-               menuWelcome: "Welcome",
-               menuShopping: "Shopping",
-               menuPrograms: "Programs",
-               menuGift: "Gift",
-            },
-            "hungarian":{
-               titleTest: "Fűzfa Apartman",
-               menuWelcome: "Üdvözlet",
-               menuShopping: "Boltok",
-               menuPrograms: "Programok",
-               menuGift: "Ajándék",
-            },
-            "romanian":{
-               titleTest: "Fűzfa Apartament",
-               menuWelcome: "...",
-               menuShopping: "...",
-               menuPrograms: "...",
-               menuGift: "...",
-            }
-         }
-      
-         if(localLang == null){
-            localStorage.setItem("language", "hungarian");
-            let localLangFin = localStorage.getItem("language");
-
-            title1.textContent = data[localLangFin].titleTest;
-            menuWelcome.textContent = data[localLangFin].menuWelcome;
-            menuShopping.textContent = data[localLangFin].menuShopping;
-            menuPrograms.textContent = data[localLangFin].menuPrograms;
-            menuGift.textContent = data[localLangFin].menuGift;
-
-         }else{
-            console.log("localLang111: ", localLang);
-            title1.textContent = data[localLang].titleTest;
-            menuWelcome.textContent = data[localLang].menuWelcome;
-            menuShopping.textContent = data[localLang].menuShopping;
-            menuPrograms.textContent = data[localLang].menuPrograms;
-            menuGift.textContent = data[localLang].menuGift;
-         }
-
-         link.forEach(el =>{
-            el.addEventListener('click', () =>{
-               const attr = el.getAttribute("language");
-               localStorage.setItem("language", attr);
-
-               title1.textContent = data[attr].titleTest;
-               menuWelcome.textContent = data[attr].menuWelcome;
-               menuShopping.textContent = data[attr].menuShopping;
-               menuPrograms.textContent = data[attr].menuPrograms;
-               menuGift.textContent = data[attr].menuGift;
-            })
-         })
-
-
-      </script>
+      <script src="js/multilang.js"></script>
    </body>
 </html>
