@@ -40,6 +40,7 @@ const welnessGheorgheni = document.querySelector(".welnessGheorgheni");
 const healthService = document.querySelector(".healthService");
 const mediucalCenterTitle = document.querySelector(".mediucalCenterTitle");
 const pharmacyTitle = document.querySelector(".pharmacy");
+const programsTitle = document.querySelector(".programsTitle");
 
 var data = {
   english: {
@@ -83,6 +84,7 @@ var data = {
     healthService: "Health services",
     mediucalCenterTitle: "Gheorgheni Municipal Hospital",
     pharmacyTitle: "Pharmacy",
+    programsTitle: "Programme guide",
   },
   hungarian: {
     menuWelcome: "Üdvözlet",
@@ -125,6 +127,7 @@ var data = {
     healthService: "Egészségügyi szolgáltatások",
     mediucalCenterTitle: "Gyergyószentmiklósi Városi Kórház",
     pharmacyTitle: "Gyógyszertár",
+    programsTitle: "Programajánló",
   },
   romanian: {
     menuWelcome: "...",
@@ -162,6 +165,7 @@ var data = {
     healthService: "...",
     mediucalCenterTitle: "...",
     pharmacyTitle: "...",
+    programsTitle: "...",
   },
 };
 
@@ -211,6 +215,7 @@ if (localLang == null) {
   welnessGheorgheni.textContent = data[localLang].welnessGheorgheni;
   healthService.textContent = data[localLang].healthService;
   mediucalCenterTitle.textContent = data[localLang].mediucalCenterTitle;
+  programsTitle.textContent = data[localLang].programsTitle;
 }
 
 link.forEach((el) => {
@@ -260,6 +265,7 @@ link.forEach((el) => {
       welnessGheorgheni.textContent = data[attr].welnessGheorgheni;
       healthService.textContent = data[attr].healthService;
       mediucalCenterTitle.textContent = data[attr].mediucalCenterTitle;
+      programsTitle.textContent = data[attr].programsTitle;
     });
   }
 });
