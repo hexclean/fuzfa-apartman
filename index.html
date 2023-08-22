@@ -10,7 +10,7 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="default" />
     <meta name="theme-color" content="#ffffff" />
     <!-- Your app title -->
-    <title>Yui Mobile</title>
+    <title>Fűzfa Apartman</title>
     <link rel="stylesheet" href="css/framework7-bundle.css" />
     <link rel="stylesheet" href="css/framework7-icons.css" />
     <link rel="stylesheet" href="css/style.css" />
@@ -21,9 +21,16 @@
       <!-- Left panel -->
       <!-- Views container -->
       <div class="views tabs">
-        <div class="view view-main tab tab-active view-init" id="tab-1">
+        <div
+          class="view view-main tab tab-active view-init"
+          id="tab-1"
+          id="home"
+        >
           <div class="page">
-            <div class="navbar">
+            <div
+              class="navbar"
+              style="box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px"
+            >
               <div class="navbar-bg"></div>
               <div class="navbar-inner">
                 <div class="left">
@@ -165,8 +172,57 @@
         </div>
         <div class="view view-init tab" id="tab-2">
           <div class="page">
+            <div
+              class="navbar"
+              style="box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px"
+            >
+              <div class="navbar-bg"></div>
+              <div class="navbar-inner">
+                <div class="left">
+                  <h3 class="changeName">Fűzfa Apartman</h3>
+                </div>
+                <div class="right langWrap">
+                  <a
+                    href="#"
+                    class="link icon-only navbar-profile"
+                    language="hungarian"
+                  >
+                    <img
+                      style="height: 25px; width: 25px"
+                      src="img/cards/flaghu.png"
+                      alt=""
+                    />
+                  </a>
+                  <a
+                    href="#"
+                    class="link icon-only navbar-profile"
+                    language="english"
+                  >
+                    <img
+                      style="height: 25px; width: 25px"
+                      src="img/cards/flagen.webp"
+                      alt=""
+                    />
+                  </a>
+                  <a
+                    href="#"
+                    class="link icon-only navbar-profile"
+                    language="romanian"
+                  >
+                    <img
+                      style="height: 25px; width: 25px"
+                      src="img/cards/flagro.png"
+                      alt=""
+                    />
+                  </a>
+                </div>
+              </div>
+            </div>
+
             <div class="page-content">
-              <h1 style="text-align: center">Legközelebbi üzlet</h1>
+              <h1 class="sarkiTitle" style="text-align: center">
+                Pár lépésre levő üzlet
+              </h1>
               <div style="margin: 0px !important" class="movie-header">
                 <img src="img/cards/sarki2.png" alt="" class="movie-cover" />
                 <div class="movie-infos">
@@ -823,236 +879,37 @@
             </div>
           </div>
         </div>
-        <div class="view view-init tab" id="tab-5">
-          <div class="page">
-            <div class="navbar navbar-large">
-              <div class="navbar-bg"></div>
-              <div class="navbar-inner">
-                <div class="left">
-                  <a href="/settings/" class="link icon-only navbar-profile">
-                    <img src="img/avatars/small-avatar.jpg" alt="" />
-                  </a>
-                </div>
-                <div class="title">Features</div>
-                <div class="title-large">
-                  <div class="title-large-text">Features</div>
-                </div>
-                <div class="right">
-                  <a href="#" class="link icon-only switch-theme">
-                    <i class="icon f7-icons">moon_stars</i>
-                  </a>
-                  <a href="/notifications/" class="link icon-only">
-                    <i class="icon f7-icons">
-                      bell
-                      <span class="badge bg-color-primary">5</span>
-                    </i>
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div class="page-content">
-              <div class="light-gray-title">General</div>
-              <div
-                class="list links-list colored-icons-list full-width list-outline list-dividers"
-              >
-                <ul>
-                  <li>
-                    <a href="/action-sheet/">
-                      <div class="colored-icon blue">
-                        <i class="icon f7-icons">square_arrow_up_fill</i>
-                      </div>
-                      Action Sheet
-                    </a>
-                  </li>
-                  <li>
-                    <a href="/columns/">
-                      <div class="colored-icon green">
-                        <i class="icon f7-icons">rectangle_split_3x1_fill</i>
-                      </div>
-                      Columns
-                    </a>
-                  </li>
-                  <li>
-                    <a href="/dialog/">
-                      <div class="colored-icon blue">
-                        <i class="icon f7-icons">checkmark_rectangle_fill</i>
-                      </div>
-                      Dialog
-                    </a>
-                  </li>
-                  <li>
-                    <a href="/icons/">
-                      <div class="colored-icon green">
-                        <i class="icon f7-icons">circle_grid_3x3_fill</i>
-                      </div>
-                      Icons
-                    </a>
-                  </li>
-                  <li>
-                    <a href="/infinite-scroll/">
-                      <div class="colored-icon pink">
-                        <i class="icon f7-icons">infinite</i>
-                      </div>
-                      Infinite Scroll
-                    </a>
-                  </li>
-                  <li>
-                    <a href="/notification/">
-                      <div class="colored-icon yellow">
-                        <i class="icon f7-icons">square_favorites_alt_fill</i>
-                      </div>
-                      Notification
-                    </a>
-                  </li>
-                  <li>
-                    <a href="/page/">
-                      <div class="colored-icon purple">
-                        <i class="icon f7-icons">doc_fill</i>
-                      </div>
-                      Page
-                    </a>
-                  </li>
-                  <li>
-                    <a href="/panel/">
-                      <div class="colored-icon purple">
-                        <i class="icon f7-icons">sidebar_left</i>
-                      </div>
-                      Panel
-                    </a>
-                  </li>
-                  <li>
-                    <a href="/photo-browser/">
-                      <div class="colored-icon yellow">
-                        <i class="icon f7-icons"
-                          >photo_fill_on_rectangle_fill</i
-                        >
-                      </div>
-                      Photo Browser
-                    </a>
-                  </li>
-                  <li>
-                    <a href="/popover/">
-                      <div class="colored-icon blue">
-                        <i class="icon f7-icons">bubble_middle_top_fill</i>
-                      </div>
-                      Popover
-                    </a>
-                  </li>
-                  <li>
-                    <a href="/popup/">
-                      <div class="colored-icon blue">
-                        <i class="icon f7-icons">arrow_up_square_fill</i>
-                      </div>
-                      Popup
-                    </a>
-                  </li>
-                  <li>
-                    <a href="/pull-to-refresh/">
-                      <div class="colored-icon pink">
-                        <i class="icon f7-icons"
-                          >arrow_uturn_down_circle_fill</i
-                        >
-                      </div>
-                      Pull To Refresh
-                    </a>
-                  </li>
-                  <li>
-                    <a href="/sheet-modal/">
-                      <div class="colored-icon blue">
-                        <i class="icon f7-icons"
-                          >arrowtriangle_up_square_fill</i
-                        >
-                      </div>
-                      Sheet Modal
-                    </a>
-                  </li>
-                  <li>
-                    <a href="/swipe-to-delete/">
-                      <div class="colored-icon pink">
-                        <i class="icon f7-icons">square_arrow_left_fill</i>
-                      </div>
-                      Swipe To Delete
-                    </a>
-                  </li>
-                  <li>
-                    <a href="/tabs/">
-                      <div class="colored-icon green">
-                        <i class="icon f7-icons">square_split_2x1_fill</i>
-                      </div>
-                      Tabs
-                    </a>
-                  </li>
-                  <li>
-                    <a href="/text-editor/">
-                      <div class="colored-icon yellow">
-                        <i class="icon f7-icons">textbox</i>
-                      </div>
-                      Text Editor
-                    </a>
-                  </li>
-                  <li>
-                    <a href="/toast/">
-                      <div class="colored-icon blue">
-                        <i class="icon f7-icons"
-                          >square_arrow_up_on_square_fill</i
-                        >
-                      </div>
-                      Toast
-                    </a>
-                  </li>
-                  <li>
-                    <a href="/tooltip/">
-                      <div class="colored-icon purple">
-                        <i class="icon f7-icons">captions_bubble_fill</i>
-                      </div>
-                      Tooltip
-                    </a>
-                  </li>
-                  <li>
-                    <a href="/typography/">
-                      <div class="colored-icon green">
-                        <i class="icon f7-icons icon-bold">textformat</i>
-                      </div>
-                      Typography
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
         <div class="toolbar tabbar tabbar-icons toolbar-bottom">
           <div class="toolbar-inner">
             <a href="#tab-1" class="tab-link tab-link-active">
               <i class="icon f7-icons">hand_thumbsup</i>
-              <span class="tabbar-label menuWelcome">Üdvözlet</span>
+              <span class="tabbar-label menuWelcome menuWelcome2"
+                >Üdvözlet</span
+              >
             </a>
             <a href="#tab-2" class="tab-link">
               <i class="icon f7-icons">bag</i>
-              <span class="tabbar-label menuShopping">Boltok</span>
+              <span class="tabbar-label menuShopping menuShopping2"
+                >Boltok</span
+              >
             </a>
             <a href="#tab-3" class="tab-link">
               <i class="icon f7-icons">calendar_badge_plus</i>
-              <span class="tabbar-label menuPrograms">Programok</span>
+              <span class="tabbar-label menuPrograms menuPrograms2"
+                >Programok</span
+              >
             </a>
             <a href="#tab-4" class="tab-link">
               <i class="icon f7-icons">gift</i>
-              <span class="tabbar-label menuGift">Ajándék</span>
+              <span class="tabbar-label menuGift menuGift2">Ajándék</span>
             </a>
-            <!-- <a href="#tab-4" class="tab-link">
-                     <i class="icon f7-icons">calendar</i>
-                     <span class="tabbar-label">Események</span>
-                     </a> -->
-            <!-- <a href="#tab-5" class="tab-link">
-                     <i class="icon f7-icons">phone</i>
-                     <span class="tabbar-label">Elérhetőség</span>
-                     </a> -->
           </div>
         </div>
       </div>
     </div>
     <script src="js/framework7-bundle.js"></script>
     <script src="js/app.js"></script>
-    <script src="js/multilang.js"></script>
+    <!-- <script src="js/multilang1.js"></script> -->
+    <!-- <script src="js/multilang2.js"></script> -->
   </body>
 </html>

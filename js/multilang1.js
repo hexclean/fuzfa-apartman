@@ -1,8 +1,6 @@
-const langEn = document.querySelector(".langWrap");
 const link = document.querySelectorAll("a");
 let localLang = localStorage.getItem("language");
 
-const title1 = document.querySelector(".changeName");
 const menuWelcome = document.querySelector(".menuWelcome");
 const menuShopping = document.querySelector(".menuShopping");
 const menuPrograms = document.querySelector(".menuPrograms");
@@ -24,10 +22,10 @@ const coldWater = document.querySelector(".coldWater");
 const coldWaterDesc = document.querySelector(".coldWaterDesc");
 const smokingTitle = document.querySelector(".smokingTitle");
 const smokingDescription = document.querySelector(".smokingDescription");
+const sarkiTitle = document.querySelector(".sarkiTitle");
 
 var data = {
   english: {
-    titleTest: "Willow Apartment",
     menuWelcome: "Welcome",
     menuShopping: "Shopping",
     menuPrograms: "Programs",
@@ -53,9 +51,9 @@ var data = {
       "Hot water comes from solar collectors. When you want to use it, you need to leave a few minutes for the hot water to warm up.",
     smokingTitle: "Smoking:",
     smokingDescription: "If you smoke, you can smoke on the balcony.",
+    sarkiTitle: "Shop just a few steps away",
   },
   hungarian: {
-    titleTest: "Fűzfa Apartman",
     menuWelcome: "Üdvözlet",
     menuShopping: "Boltok",
     menuPrograms: "Programok",
@@ -81,9 +79,9 @@ var data = {
       "A melegvíz napkollektorokból érkezik. Amikor használni szeretnéd, néhány percet várnod kell, hogy a víz meleg legyen.",
     smokingTitle: "Dohányzás:",
     smokingDescription: "Ha dohányoznál, az erkélyen van erre lehetőség.",
+    sarkiTitle: "Pár lépésre levő üzlet",
   },
   romanian: {
-    titleTest: "Apartament Fűzfa",
     menuWelcome: "...",
     menuShopping: "...",
     menuPrograms: "...",
@@ -105,6 +103,7 @@ var data = {
     coldWaterDesc: "...",
     smokingTitle: "...",
     smokingDescription: "...",
+    sarkiTitle: "...",
   },
 };
 
@@ -112,7 +111,6 @@ if (localLang == null) {
   localStorage.setItem("language", "hungarian");
 } else {
   let localLang = localStorage.getItem("language");
-  title1.textContent = data[localLang].titleTest;
   menuWelcome.textContent = data[localLang].menuWelcome;
   menuShopping.textContent = data[localLang].menuShopping;
   menuPrograms.textContent = data[localLang].menuPrograms;
@@ -134,6 +132,7 @@ if (localLang == null) {
   coldWaterDesc.textContent = data[localLang].coldWaterDesc;
   smokingTitle.textContent = data[localLang].smokingTitle;
   smokingDescription.textContent = data[localLang].smokingDescription;
+  sarkiTitle.textContent = data[localLang].sarkiTitle;
 }
 
 link.forEach((el) => {
@@ -141,7 +140,6 @@ link.forEach((el) => {
     const attr = el.getAttribute("language");
     localStorage.setItem("language", attr);
 
-    title1.textContent = data[attr].titleTest;
     menuWelcome.textContent = data[attr].menuWelcome;
     menuShopping.textContent = data[attr].menuShopping;
     menuPrograms.textContent = data[attr].menuPrograms;
@@ -163,5 +161,6 @@ link.forEach((el) => {
     coldWaterDesc.textContent = data[attr].coldWaterDesc;
     smokingTitle.textContent = data[attr].smokingTitle;
     smokingDescription.textContent = data[attr].smokingDescription;
+    sarkiTitle.textContent = data[attr].sarkiTitle;
   });
 });
