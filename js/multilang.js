@@ -129,7 +129,7 @@ var data = {
     navigationDesc: "Google térképen",
     favouriteRestaurants: "Környékbeli ajánlott éttermek",
     walkMin: "2 perc",
-    welnessGheorgheni: "2 perc",
+    welnessGheorgheni: "Gyergyószentmiklósi uszoda",
     healthService: "Egészségügyi szolgáltatások",
     mediucalCenterTitle: "Gyergyószentmiklósi Városi Kórház",
     pharmacyTitle: "Gyógyszertár",
