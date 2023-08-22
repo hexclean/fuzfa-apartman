@@ -23,6 +23,14 @@ const coldWaterDesc = document.querySelector(".coldWaterDesc");
 const smokingTitle = document.querySelector(".smokingTitle");
 const smokingDescription = document.querySelector(".smokingDescription");
 const sarkiTitle = document.querySelector(".sarkiTitle");
+const sarkiType = document.querySelector(".sarkiType");
+const sarkiTypeName = document.querySelector(".sarkiTypeName");
+const timeWalk = document.querySelector(".timeWalk");
+const sarkiRating = document.querySelector(".sarkiRating");
+const sarkiDescription = document.querySelector(".sarkiDescription");
+const navigationTitle = document.querySelector(".navigationTitle");
+const navigationDesc = document.querySelector(".navigationDesc");
+const favouriteRestaurants = document.querySelector(".favouriteRestaurants");
 
 var data = {
   english: {
@@ -52,6 +60,15 @@ var data = {
     smokingTitle: "Smoking:",
     smokingDescription: "If you smoke, you can smoke on the balcony.",
     sarkiTitle: "Shop just a few steps away",
+    sarkiType: "Type",
+    sarkiTypeName: "Convenience",
+    timeWalk: "Walk",
+    sarkiRating: "Rating",
+    sarkiDescription:
+      "The convenience store located very close to us is a convenient place where we can find a wide range of our everyday necessities. In the store, alongside fresh groceries, cleaning products and beauty care items are available, as well as beverages.",
+    navigationTitle: "Route planning",
+    navigationDesc: "on Google map",
+    favouriteRestaurants: "Recommended restaurants in the area",
   },
   hungarian: {
     menuWelcome: "Üdvözlet",
@@ -80,6 +97,15 @@ var data = {
     smokingTitle: "Dohányzás:",
     smokingDescription: "Ha dohányoznál, az erkélyen van erre lehetőség.",
     sarkiTitle: "Pár lépésre levő üzlet",
+    sarkiType: "Típus",
+    sarkiTypeName: "Vegyes",
+    timeWalk: "Gyalog",
+    sarkiRating: "Értékelés",
+    sarkiDescription:
+      "A közvetlen közelünkben lévő vegyes üzlet egy kényelmes hely, ahol széles választékban megtalálhatjuk mindennapi szükségleteinket. Az üzletben friss élelmiszerek mellett tisztítószerek, valamint szépségápolási termékek és italok is rendelkezésünkre állnak.",
+    navigationTitle: "Útvonal tervezés",
+    navigationDesc: "Google térképen",
+    favouriteRestaurants: "Környékbeli ajánlott éttermek",
   },
   romanian: {
     menuWelcome: "...",
@@ -104,6 +130,14 @@ var data = {
     smokingTitle: "...",
     smokingDescription: "...",
     sarkiTitle: "...",
+    sarkiType: "...",
+    sarkiTypeName: "...",
+    timeWalk: "...",
+    sarkiRating: "...",
+    sarkiDescription: "...",
+    navigationTitle: "...",
+    navigationDesc: "...",
+    favouriteRestaurants: "...",
   },
 };
 
@@ -133,34 +167,51 @@ if (localLang == null) {
   smokingTitle.textContent = data[localLang].smokingTitle;
   smokingDescription.textContent = data[localLang].smokingDescription;
   sarkiTitle.textContent = data[localLang].sarkiTitle;
+  sarkiType.textContent = data[localLang].sarkiType;
+  sarkiTypeName.textContent = data[localLang].sarkiTypeName;
+  timeWalk.textContent = data[localLang].timeWalk;
+  sarkiRating.textContent = data[localLang].sarkiRating;
+  sarkiDescription.textContent = data[localLang].sarkiDescription;
+  navigationTitle.textContent = data[localLang].navigationTitle;
+  navigationDesc.textContent = data[localLang].navigationDesc;
+  favouriteRestaurants.textContent = data[localLang].favouriteRestaurants;
 }
 
 link.forEach((el) => {
-  el.addEventListener("click", () => {
-    const attr = el.getAttribute("language");
-    localStorage.setItem("language", attr);
-
-    menuWelcome.textContent = data[attr].menuWelcome;
-    menuShopping.textContent = data[attr].menuShopping;
-    menuPrograms.textContent = data[attr].menuPrograms;
-    menuGift.textContent = data[attr].menuGift;
-    welcomeTitle.textContent = data[attr].welcomeTitle;
-    welcome_text1.textContent = data[attr].welcome_text1;
-    welcome_text2.textContent = data[attr].welcome_text2;
-    welcome_text3.textContent = data[attr].welcome_text3;
-    checkInOut.textContent = data[attr].checkInOut;
-    checkIn.textContent = data[attr].checkIn;
-    checkOut.textContent = data[attr].checkOut;
-    checkOut2.textContent = data[attr].checkOut2;
-    impInfo.textContent = data[attr].impInfo;
-    impInfo1.textContent = data[attr].impInfo1;
-    wifiInfo.textContent = data[attr].wifiInfo;
-    wifiName.textContent = data[attr].wifiName;
-    wifiPsw.textContent = data[attr].wifiPsw;
-    coldWater.textContent = data[attr].coldWater;
-    coldWaterDesc.textContent = data[attr].coldWaterDesc;
-    smokingTitle.textContent = data[attr].smokingTitle;
-    smokingDescription.textContent = data[attr].smokingDescription;
-    sarkiTitle.textContent = data[attr].sarkiTitle;
-  });
+  const attr = el.getAttribute("language");
+  if (attr != null && attr != undefined) {
+    el.addEventListener("click", () => {
+      localStorage.setItem("language", attr);
+      menuWelcome.textContent = data[attr].menuWelcome;
+      menuShopping.textContent = data[attr].menuShopping;
+      menuPrograms.textContent = data[attr].menuPrograms;
+      menuGift.textContent = data[attr].menuGift;
+      welcomeTitle.textContent = data[attr].welcomeTitle;
+      welcome_text1.textContent = data[attr].welcome_text1;
+      welcome_text2.textContent = data[attr].welcome_text2;
+      welcome_text3.textContent = data[attr].welcome_text3;
+      checkInOut.textContent = data[attr].checkInOut;
+      checkIn.textContent = data[attr].checkIn;
+      checkOut.textContent = data[attr].checkOut;
+      checkOut2.textContent = data[attr].checkOut2;
+      impInfo.textContent = data[attr].impInfo;
+      impInfo1.textContent = data[attr].impInfo1;
+      wifiInfo.textContent = data[attr].wifiInfo;
+      wifiName.textContent = data[attr].wifiName;
+      wifiPsw.textContent = data[attr].wifiPsw;
+      coldWater.textContent = data[attr].coldWater;
+      coldWaterDesc.textContent = data[attr].coldWaterDesc;
+      smokingTitle.textContent = data[attr].smokingTitle;
+      smokingDescription.textContent = data[attr].smokingDescription;
+      sarkiTitle.textContent = data[attr].sarkiTitle;
+      sarkiType.textContent = data[attr].sarkiType;
+      sarkiTypeName.textContent = data[attr].sarkiTypeName;
+      timeWalk.textContent = data[attr].timeWalk;
+      sarkiRating.textContent = data[attr].sarkiRating;
+      sarkiDescription.textContent = data[attr].sarkiDescription;
+      navigationTitle.textContent = data[attr].navigationTitle;
+      navigationDesc.textContent = data[attr].navigationDesc;
+      favouriteRestaurants.textContent = data[attr].favouriteRestaurants;
+    });
+  }
 });

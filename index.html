@@ -16,10 +16,7 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body class="color-blue">
-    <!-- App root element -->
     <div id="app">
-      <!-- Left panel -->
-      <!-- Views container -->
       <div class="views tabs">
         <div
           class="view view-main tab tab-active view-init"
@@ -228,27 +225,27 @@
                 <div class="movie-infos">
                   <div class="movie-block">
                     <i class="icon f7-icons">map_pin_ellipse</i>
-                    <div class="movie-block-name">Típus</div>
-                    <div class="movie-block-text">Vegyes</div>
+                    <div class="movie-block-name sarkiType">Típus</div>
+                    <div class="movie-block-text sarkiTypeName">Vegyes</div>
                   </div>
                   <div class="movie-block">
                     <i class="icon f7-icons">clock_fill</i>
-                    <div class="movie-block-name">Gyalog</div>
+                    <div class="movie-block-name timeWalk">Gyalog</div>
                     <div class="movie-block-text">2 perc</div>
                   </div>
                   <div class="movie-block">
                     <i class="icon f7-icons">star_fill</i>
-                    <div class="movie-block-name">Értékelés</div>
+                    <div class="movie-block-name sarkiRating">Értékelés</div>
                     <div class="movie-block-text">4.7</div>
                   </div>
                 </div>
               </div>
-              <p>
-                Közvetlen közelünkben található egy kényelmes sarki üzlet, ahol
-                minden, amire szükséged lehet, kézre áll.<br />
-                Az élelmiszerektől kezdve a vegyi árukig, itt mindent megtalálsz
-                egy helyen. Praktikus és gyors vásárlási lehetőség mindennapi
-                szükségleteid kielégítéséhez.
+              <p class="sarkiDescription">
+                A közvetlen közelünkben lévő vegyes üzlet egy kényelmes hely,
+                ahol széles választékban megtalálhatjuk mindennapi
+                szükségleteinket. Az üzletben friss élelmiszerek mellett
+                tisztítószerek, valamint szépségápolási termékek és italok is
+                rendelkezésünkre állnak.
               </p>
               <a
                 target="_blank"
@@ -257,11 +254,18 @@
               >
                 <i class="icon f7-icons">map_pin_ellipse</i>
                 <div class="link-banner-text">
-                  <div class="link-banner-title">Útvonal tervezés</div>
-                  <div class="link-banner-subtitle">Google térképen</div>
+                  <div class="link-banner-title navigationTitle">
+                    Útvonal tervezés
+                  </div>
+                  <div class="link-banner-subtitle navigationDesc">
+                    Google térképen
+                  </div>
                 </div>
               </a>
-              <h1 style="padding-top: 15px; text-align: center">
+              <h1
+                class="favouriteRestaurants"
+                style="padding-top: 15px; text-align: center"
+              >
                 Környékbeli ajánlott éttermek
               </h1>
               <div class="card">
