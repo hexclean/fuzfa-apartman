@@ -2,6 +2,8 @@ const link = document.querySelectorAll("a");
 const navTitle = document.querySelectorAll(".navigationTitle");
 const navDesc = document.querySelectorAll(".navigationDesc");
 const pharmacy = document.querySelectorAll(".pharmacy");
+const progInfBtnList = document.querySelectorAll(".programInfBtn");
+const readMoreBtnList = document.querySelectorAll(".readMoreBtn");
 
 let localLang = localStorage.getItem("language");
 
@@ -41,6 +43,8 @@ const healthService = document.querySelector(".healthService");
 const mediucalCenterTitle = document.querySelector(".mediucalCenterTitle");
 const pharmacyTitle = document.querySelector(".pharmacy");
 const programsTitle = document.querySelector(".programsTitle");
+const programInfBtn = document.querySelector(".programInfBtn");
+const programReadBtn = document.querySelector(".readMoreBtn");
 
 var data = {
   english: {
@@ -85,6 +89,8 @@ var data = {
     mediucalCenterTitle: "Gheorgheni Municipal Hospital",
     pharmacyTitle: "Pharmacy",
     programsTitle: "Programme guide",
+    programInfBtn: "More information",
+    readMoreBtn: "Read more",
   },
   hungarian: {
     menuWelcome: "Üdvözlet",
@@ -128,6 +134,8 @@ var data = {
     mediucalCenterTitle: "Gyergyószentmiklósi Városi Kórház",
     pharmacyTitle: "Gyógyszertár",
     programsTitle: "Programajánló",
+    programInfBtn: "További információ",
+    readMoreBtn: "Tovább olvasom",
   },
   romanian: {
     menuWelcome: "...",
@@ -166,6 +174,8 @@ var data = {
     mediucalCenterTitle: "...",
     pharmacyTitle: "...",
     programsTitle: "...",
+    programInfBtn: "...",
+    readMoreBtn: "...",
   },
 };
 
@@ -209,6 +219,13 @@ if (localLang == null) {
   for (var i = pharmacy.length; i--; ) {
     pharmacy[i].textContent = data[localLang].pharmacyTitle;
   }
+  for (var i = progInfBtnList.length; i--; ) {
+    progInfBtnList[i].textContent = data[localLang].programInfBtn;
+  }
+
+  for (var i = readMoreBtnList.length; i--; ) {
+    readMoreBtnList[i].textContent = data[localLang].readMoreBtn;
+  }
 
   favouriteRestaurants.textContent = data[localLang].favouriteRestaurants;
   walkMin.textContent = data[localLang].walkMin;
@@ -216,6 +233,7 @@ if (localLang == null) {
   healthService.textContent = data[localLang].healthService;
   mediucalCenterTitle.textContent = data[localLang].mediucalCenterTitle;
   programsTitle.textContent = data[localLang].programsTitle;
+  programInfBtn.textContent = data[localLang].programInfBtn;
 }
 
 link.forEach((el) => {
@@ -259,6 +277,12 @@ link.forEach((el) => {
       for (var i = pharmacy.length; i--; ) {
         pharmacy[i].textContent = data[attr].pharmacyTitle;
       }
+      for (var i = progInfBtnList.length; i--; ) {
+        progInfBtnList[i].textContent = data[attr].programInfBtn;
+      }
+      for (var i = readMoreBtnList.length; i--; ) {
+        readMoreBtnList[i].textContent = data[attr].readMoreBtn;
+      }
 
       favouriteRestaurants.textContent = data[attr].favouriteRestaurants;
       walkMin.textContent = data[attr].walkMin;
@@ -266,6 +290,7 @@ link.forEach((el) => {
       healthService.textContent = data[attr].healthService;
       mediucalCenterTitle.textContent = data[attr].mediucalCenterTitle;
       programsTitle.textContent = data[attr].programsTitle;
+      programInfBtn.textContent = data[attr].programInfBtn;
     });
   }
 });
