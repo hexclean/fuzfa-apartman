@@ -1,4 +1,7 @@
 const link = document.querySelectorAll("a");
+const navTitle = document.querySelectorAll(".navigationTitle");
+const navDesc = document.querySelectorAll(".navigationDesc");
+
 let localLang = localStorage.getItem("language");
 
 const menuWelcome = document.querySelector(".menuWelcome");
@@ -31,6 +34,7 @@ const sarkiDescription = document.querySelector(".sarkiDescription");
 const navigationTitle = document.querySelector(".navigationTitle");
 const navigationDesc = document.querySelector(".navigationDesc");
 const favouriteRestaurants = document.querySelector(".favouriteRestaurants");
+const walkMin = document.querySelector(".walkMin");
 
 var data = {
   english: {
@@ -69,6 +73,7 @@ var data = {
     navigationTitle: "Route planning",
     navigationDesc: "on Google map",
     favouriteRestaurants: "Recommended restaurants in the area",
+    walkMin: "2 minutes",
   },
   hungarian: {
     menuWelcome: "Üdvözlet",
@@ -106,6 +111,7 @@ var data = {
     navigationTitle: "Útvonal tervezés",
     navigationDesc: "Google térképen",
     favouriteRestaurants: "Környékbeli ajánlott éttermek",
+    walkMin: "2 perc",
   },
   romanian: {
     menuWelcome: "...",
@@ -138,6 +144,7 @@ var data = {
     navigationTitle: "...",
     navigationDesc: "...",
     favouriteRestaurants: "...",
+    walkMin: "...",
   },
 };
 
@@ -172,9 +179,14 @@ if (localLang == null) {
   timeWalk.textContent = data[localLang].timeWalk;
   sarkiRating.textContent = data[localLang].sarkiRating;
   sarkiDescription.textContent = data[localLang].sarkiDescription;
-  navigationTitle.textContent = data[localLang].navigationTitle;
-  navigationDesc.textContent = data[localLang].navigationDesc;
+
+  for (var i = navTitle.length; i--; ) {
+    navTitle[i].textContent = data[localLang].navigationTitle;
+    navDesc[i].textContent = data[localLang].navigationDesc;
+  }
+
   favouriteRestaurants.textContent = data[localLang].favouriteRestaurants;
+  walkMin.textContent = data[localLang].walkMin;
 }
 
 link.forEach((el) => {
@@ -209,9 +221,14 @@ link.forEach((el) => {
       timeWalk.textContent = data[attr].timeWalk;
       sarkiRating.textContent = data[attr].sarkiRating;
       sarkiDescription.textContent = data[attr].sarkiDescription;
-      navigationTitle.textContent = data[attr].navigationTitle;
-      navigationDesc.textContent = data[attr].navigationDesc;
+
+      for (var i = navTitle.length; i--; ) {
+        navTitle[i].textContent = data[attr].navigationTitle;
+        navDesc[i].textContent = data[attr].navigationDesc;
+      }
+
       favouriteRestaurants.textContent = data[attr].favouriteRestaurants;
+      walkMin.textContent = data[attr].walkMin;
     });
   }
 });
