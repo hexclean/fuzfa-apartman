@@ -1,6 +1,7 @@
 const link = document.querySelectorAll("a");
 const navTitle = document.querySelectorAll(".navigationTitle");
 const navDesc = document.querySelectorAll(".navigationDesc");
+const pharmacy = document.querySelectorAll(".pharmacy");
 
 let localLang = localStorage.getItem("language");
 
@@ -35,6 +36,10 @@ const navigationTitle = document.querySelector(".navigationTitle");
 const navigationDesc = document.querySelector(".navigationDesc");
 const favouriteRestaurants = document.querySelector(".favouriteRestaurants");
 const walkMin = document.querySelector(".walkMin");
+const welnessGheorgheni = document.querySelector(".welnessGheorgheni");
+const healthService = document.querySelector(".healthService");
+const mediucalCenterTitle = document.querySelector(".mediucalCenterTitle");
+const pharmacyTitle = document.querySelector(".pharmacy");
 
 var data = {
   english: {
@@ -74,6 +79,10 @@ var data = {
     navigationDesc: "on Google map",
     favouriteRestaurants: "Recommended restaurants in the area",
     walkMin: "2 minutes",
+    welnessGheorgheni: "Swimming pool - Gheorgheni",
+    healthService: "Health services",
+    mediucalCenterTitle: "Gheorgheni Municipal Hospital",
+    pharmacyTitle: "Pharmacy",
   },
   hungarian: {
     menuWelcome: "Üdvözlet",
@@ -112,6 +121,10 @@ var data = {
     navigationDesc: "Google térképen",
     favouriteRestaurants: "Környékbeli ajánlott éttermek",
     walkMin: "2 perc",
+    welnessGheorgheni: "2 perc",
+    healthService: "Egészségügyi szolgáltatások",
+    mediucalCenterTitle: "Gyergyószentmiklósi Városi Kórház",
+    pharmacyTitle: "Gyógyszertár",
   },
   romanian: {
     menuWelcome: "...",
@@ -145,6 +158,10 @@ var data = {
     navigationDesc: "...",
     favouriteRestaurants: "...",
     walkMin: "...",
+    welnessGheorgheni: "...",
+    healthService: "...",
+    mediucalCenterTitle: "...",
+    pharmacyTitle: "...",
   },
 };
 
@@ -185,8 +202,15 @@ if (localLang == null) {
     navDesc[i].textContent = data[localLang].navigationDesc;
   }
 
+  for (var i = pharmacy.length; i--; ) {
+    pharmacy[i].textContent = data[localLang].pharmacyTitle;
+  }
+
   favouriteRestaurants.textContent = data[localLang].favouriteRestaurants;
   walkMin.textContent = data[localLang].walkMin;
+  welnessGheorgheni.textContent = data[localLang].welnessGheorgheni;
+  healthService.textContent = data[localLang].healthService;
+  mediucalCenterTitle.textContent = data[localLang].mediucalCenterTitle;
 }
 
 link.forEach((el) => {
@@ -227,8 +251,15 @@ link.forEach((el) => {
         navDesc[i].textContent = data[attr].navigationDesc;
       }
 
+      for (var i = pharmacy.length; i--; ) {
+        pharmacy[i].textContent = data[attr].pharmacyTitle;
+      }
+
       favouriteRestaurants.textContent = data[attr].favouriteRestaurants;
       walkMin.textContent = data[attr].walkMin;
+      welnessGheorgheni.textContent = data[attr].welnessGheorgheni;
+      healthService.textContent = data[attr].healthService;
+      mediucalCenterTitle.textContent = data[attr].mediucalCenterTitle;
     });
   }
 });
