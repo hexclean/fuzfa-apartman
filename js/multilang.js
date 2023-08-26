@@ -45,6 +45,7 @@ const pharmacyTitle = document.querySelector(".pharmacy");
 const programsTitle = document.querySelector(".programsTitle");
 const programInfBtn = document.querySelector(".programInfBtn");
 const programReadBtn = document.querySelector(".readMoreBtn");
+const basa_desc = document.querySelector(".basa_desc");
 
 var data = {
   english: {
@@ -91,6 +92,7 @@ var data = {
     programsTitle: "Programme guide",
     programInfBtn: "More information",
     readMoreBtn: "Read more",
+    basa_desc: "A Basa Fogadó elkötelezetten őrzi a székely hagyományokat.",
   },
   hungarian: {
     menuWelcome: "Üdvözlet",
@@ -124,7 +126,7 @@ var data = {
     timeWalk: "Gyalog",
     sarkiRating: "Értékelés",
     sarkiDescription:
-      "A közvetlen közelünkben lévő vegyes üzlet egy kényelmes hely, ahol széles választékban megtalálhatjuk mindennapi szükségleteinket. Az üzletben friss élelmiszerek mellett tisztítószerek, valamint szépségápolási termékek és italok is rendelkezésünkre állnak.",
+      "A közvetlen közelünkben elhelyezkedő vegyes üzlet egy ideális hely, ahol széles választékban találhatók meg mindennapi szükségleteink. Az üzlet kínálatában friss élelmiszereken túl tisztítószerek, szépségápolási termékek és italok is megtalálhatóak.",
     navigationTitle: "Útvonal tervezés",
     navigationDesc: "Google térképen",
     favouriteRestaurants: "Környékbeli ajánlott éttermek",
@@ -136,6 +138,7 @@ var data = {
     programsTitle: "Programajánló",
     programInfBtn: "További információ",
     readMoreBtn: "Tovább olvasom",
+    basa_desc: "A Basa Fogadó elkötelezetten őrzi a székely hagyományokat.",
   },
   romanian: {
     menuWelcome: "...",
@@ -176,6 +179,7 @@ var data = {
     programsTitle: "...",
     programInfBtn: "...",
     readMoreBtn: "...",
+    basa_desc: "...",
   },
 };
 
@@ -234,6 +238,7 @@ if (localLang == null) {
   mediucalCenterTitle.textContent = data[localLang].mediucalCenterTitle;
   programsTitle.textContent = data[localLang].programsTitle;
   programInfBtn.textContent = data[localLang].programInfBtn;
+  basa_desc.textContent = data[localLang].basa_desc;
 }
 
 link.forEach((el) => {
@@ -291,6 +296,7 @@ link.forEach((el) => {
       mediucalCenterTitle.textContent = data[attr].mediucalCenterTitle;
       programsTitle.textContent = data[attr].programsTitle;
       programInfBtn.textContent = data[attr].programInfBtn;
+      basa_desc.textContent = data[attr].basa_desc;
     });
   }
 });
